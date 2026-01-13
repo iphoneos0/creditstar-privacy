@@ -1,73 +1,299 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreditStar - 隱私權政策 (Privacy Policy)</title>
+    <title>CreditStar - Privacy Policy</title>
     <style>
+        :root {
+            --primary-color: #007AFF;
+            --bg-color: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1C1C1E;
+            --text-secondary: #3C3C43;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background-color: white;
+            background-color: var(--card-bg);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; }
-        p { margin-bottom: 15px; }
-        .highlight { color: #e74c3c; font-weight: bold; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #888; text-align: center; }
+
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Content Typography */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .date {
+            font-size: 14px;
+            color: #8E8E93;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        p, ul {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 13px;
+            color: #8E8E93;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Utility to hide/show languages */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 24px; }
+            h1 { font-size: 24px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>CreditStar 隱私權政策</h1>
-    <p>生效日期：2026年1月1日</p>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('hk')">繁體中文</button>
+        <button class="lang-btn" onclick="switchLang('cn')">简体中文</button>
+    </div>
 
-    <p>感謝您使用 <strong>CreditStar (信用卡回贈之星)</strong>。本應用程序由 CreditStar Team（以下簡稱「我們」）開發。我們非常重視您的個人隱私，並承諾保護您的個人資料。</p>
+    <div id="en" class="content-section active">
+        <h1>Privacy Policy</h1>
+        <span class="date">Effective Date: January 13, 2026</span>
 
-    <h2>1. 我們收集什麼信息？</h2>
-    <p><strong>我們不收集任何個人敏感信息。</strong></p>
-    <p>CreditStar 是一款<span class="highlight">本地數據 (Local-First)</span> 應用程序。這意味著：</p>
-    <ul>
-        <li>您輸入的信用卡資料（如發卡行、卡種類型、額度等）僅存儲在您自己的設備（iPhone/iPad）上的本地數據庫中。</li>
-        <li>我們沒有服務器，也不會將您的信用卡信息上傳到任何雲端數據庫。</li>
-        <li>我們無法查看、訪問或分享您的財務數據。</li>
-    </ul>
+        <p>Thank you for using <strong>CreditStar</strong>. This application is developed by the CreditStar Team ("we", "us"). We respect your privacy and are committed to protecting your personal data through a strictly local-first approach.</p>
 
-    <h2>2. 數據存儲與同步</h2>
-    <p>所有的應用數據均存儲在您的設備內部存儲空間中。如果您使用 iCloud 備份功能，您的數據可能會隨您的設備系統備份存儲在 Apple 的 iCloud 服務器上，這受到 Apple 隱私政策的保護。</p>
+        <h2>1. Information Collection</h2>
+        <p><strong>We do not collect any sensitive personal information.</strong></p>
+        <p>CreditStar is designed as a <span class="highlight">Local-First Application</span>. This means:</p>
+        <ul>
+            <li>All credit card details (issuers, limits, reward preferences) you input are stored strictly on your local device (iPhone/iPad).</li>
+            <li>We do not operate a backend server to store your financial data.</li>
+            <li>We have no access to your transaction history or card information.</li>
+        </ul>
 
-    <h2>3. 權限使用說明</h2>
-    <p>為了提供服務，應用程序可能會請求以下權限，您可以隨時在系統設置中關閉：</p>
-    <ul>
-        <li><strong>網絡權限：</strong> 僅用於更新信用卡回贈規則或獲取最新的銀行優惠信息。您的個人數據不會通過網絡發送。</li>
-        <li><strong>通知權限：</strong> 用於提醒您信用卡還款日期或年費繳納（僅在本地觸發）。</li>
-    </ul>
+        <h2>2. Data Storage</h2>
+        <p>Your data resides in your device's internal storage (CoreData). If you enable iCloud Backup on your device, your app data may be backed up to Apple's iCloud servers, which is governed by Apple's Privacy Policy.</p>
 
-    <h2>4. 第三方服務</h2>
-    <p>本應用程序不包含任何第三方廣告 SDK，也不會將用戶行為數據出售給第三方。</p>
+        <h2>3. Permissions</h2>
+        <p>To provide core functionality, the app may request the following permissions:</p>
+        <ul>
+            <li><strong>Network Access:</strong> Used solely to fetch the latest credit card reward rules, public promotional info, or exchange rates. No user data is sent outward.</li>
+            <li><strong>Notifications:</strong> Used for local reminders (e.g., bill payment due dates) set by you.</li>
+        </ul>
 
-    <h2>5. 政策更新</h2>
-    <p>我們可能會不時更新本隱私政策。任何更改都將發布在此頁面上。建議您定期查看本頁面以獲取最新信息。</p>
+        <h2>4. Third-Party Services</h2>
+        <p>We do not include any third-party advertising SDKs, nor do we sell user behavior data to third parties.</p>
 
-    <h2>6. 聯繫我們</h2>
-    <p>如果您對本隱私政策有任何疑問，請通過以下方式聯繫我們：</p>
-    <p>電子郵件：<strong>support@creditstar.app</strong> </p>
+        <h2>5. Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>Email: <a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div id="hk" class="content-section">
+        <h1>隱私權政策</h1>
+        <span class="date">生效日期：2026年1月13日</span>
+
+        <p>感謝您使用 <strong>CreditStar (信用卡回贈之星)</strong>。本應用程式由 CreditStar Team（以下簡稱「我們」）開發。我們非常重視您的個人私隱，並承諾透過「本地優先」的方式保護您的資料。</p>
+
+        <h2>1. 我們收集什麼資料？</h2>
+        <p><strong>我們不收集任何個人敏感資料。</strong></p>
+        <p>CreditStar 是一款<span class="highlight">本地數據 (Local-First)</span> 應用程式。這意味著：</p>
+        <ul>
+            <li>您輸入的所有信用卡資料（如發卡銀行、類別、額度等）僅存儲在您自己的設備（iPhone/iPad）上的本地數據庫中。</li>
+            <li>我們沒有後台伺服器，也不會將您的信用卡信息上傳到任何雲端數據庫。</li>
+            <li>我們無法查看、訪問或分享您的財務數據。</li>
+        </ul>
+
+        <h2>2. 數據存儲與同步</h2>
+        <p>所有的應用數據均存儲在您的設備內部存儲空間中。如果您使用 iCloud 備份功能，您的數據可能會隨您的設備系統備份存儲在 Apple 的 iCloud 伺服器上，這受到 Apple 私隱政策的保護。</p>
+
+        <h2>3. 權限使用說明</h2>
+        <p>為了提供服務，應用程式可能會請求以下權限：</p>
+        <ul>
+            <li><strong>網絡權限：</strong> 僅用於更新信用卡回贈規則或獲取最新的銀行優惠資訊。您的個人數據不會通過網絡發送。</li>
+            <li><strong>通知權限：</strong> 用於提醒您信用卡還款日期或年費繳納（僅在本地觸發）。</li>
+        </ul>
+
+        <h2>4. 第三方服務</h2>
+        <p>本應用程式不包含任何第三方廣告 SDK，也不會將用戶行為數據出售給第三方。</p>
+
+        <h2>5. 政策更新</h2>
+        <p>我們可能會不時更新本隱私政策。建議您定期查看本頁面以獲取最新資訊。</p>
+
+        <h2>6. 聯絡我們</h2>
+        <p>如果您對本隱私政策有任何疑問，請通過以下方式聯絡我們：</p>
+        <p>電子郵件：<a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div id="cn" class="content-section">
+        <h1>隐私政策</h1>
+        <span class="date">生效日期：2026年1月13日</span>
+
+        <p>感谢您使用 <strong>CreditStar</strong>。本应用程序由 CreditStar Team（以下简称“我们”）开发。我们非常重视您的个人隐私，并承诺通过“本地优先”的方式保护您的数据。</p>
+
+        <h2>1. 我们收集什么信息？</h2>
+        <p><strong>我们不收集任何个人敏感信息。</strong></p>
+        <p>CreditStar 是一款<span class="highlight">本地数据 (Local-First)</span> 应用程序。这意味着：</p>
+        <ul>
+            <li>您输入的所有信用卡资料（如发卡银行、类别、额度等）仅存储在您自己的设备（iPhone/iPad）上的本地数据库中。</li>
+            <li>我们没有后台服务器，也不会将您的信用卡信息上传到任何云端数据库。</li>
+            <li>我们无法查看、访问或分享您的财务数据。</li>
+        </ul>
+
+        <h2>2. 数据存储与同步</h2>
+        <p>所有的应用数据均存储在您的设备内部存储空间中。如果您使用 iCloud 备份功能，您的数据可能会随您的设备系统备份存储在 Apple 的 iCloud 服务器上，这受到 Apple 隐私政策的保护。</p>
+
+        <h2>3. 权限使用说明</h2>
+        <p>为了提供服务，应用程序可能会请求以下权限：</p>
+        <ul>
+            <li><strong>网络权限：</strong> 仅用于更新信用卡返现规则或获取最新的银行优惠信息。您的个人数据不会通过网络发送。</li>
+            <li><strong>通知权限：</strong> 用于提醒您信用卡还款日期或年费缴纳（仅在本地触发）。</li>
+        </ul>
+
+        <h2>4. 第三方服务</h2>
+        <p>本应用程序不包含任何第三方广告 SDK，也不会将用户行为数据出售给第三方。</p>
+
+        <h2>5. 政策更新</h2>
+        <p>我们可能会不时更新本隐私政策。建议您定期查看本页面以获取最新信息。</p>
+
+        <h2>6. 联系我们</h2>
+        <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+        <p>电子邮件：<a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 CreditStar Team. All rights reserved.
+    </div>
 </div>
 
-<div class="footer">
-    &copy; 2026 CreditStar Team. All rights reserved.
-</div>
+<script>
+    function switchLang(lang) {
+        // 1. Hide all sections
+        document.querySelectorAll('.content-section').forEach(div => {
+            div.classList.remove('active');
+        });
+
+        // 2. Show selected section
+        document.getElementById(lang).classList.add('active');
+
+        // 3. Update buttons style
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Find the button that was clicked (based on the onclick attribute logic or index)
+        // Simple way: check the onclick attribute content
+        const buttons = document.querySelectorAll('.lang-btn');
+        if (lang === 'en') buttons[0].classList.add('active');
+        if (lang === 'hk') buttons[1].classList.add('active');
+        if (lang === 'cn') buttons[2].classList.add('active');
+    }
+
+    // Auto-detect language on load
+    window.onload = function() {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.includes('HK') || userLang.includes('TW')) {
+            switchLang('hk');
+        } else if (userLang.includes('CN')) {
+            switchLang('cn');
+        } else {
+            switchLang('en'); // Default to English
+        }
+    };
+</script>
 
 </body>
 </html>
