@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditStar - Terms of Use</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --bg-color: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1C1C1E;
+            --text-secondary: #3C3C43;
+            --danger-color: #FF3B30;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        p, ul {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 6px; }
+
+        .caps {
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background-color: #FFF4F4;
+            border-left: 4px solid var(--danger-color);
+            padding: 15px;
+            margin: 20px 0;
+            color: #C0392B;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 13px;
+            color: #8E8E93;
+        }
+
+        a { color: var(--primary-color); text-decoration: none; }
+
+        /* Content Visibility */
+        .content-section { display: none; animation: fadeIn 0.3s ease; }
+        .content-section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 24px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('hk')">繁體中文</button>
+        <button class="lang-btn" onclick="switchLang('cn')">简体中文</button>
+    </div>
+
+    <div id="en" class="content-section active">
+        <h1>Terms of Use (EULA)</h1>
+        <p class="caps">Last Updated: January 13, 2026</p>
+
+        <p>By downloading or using the app "CreditStar" (the "Application"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the Application.</p>
+
+        <h2>1. Scope of License</h2>
+        <p>CreditStar Team grants you a revocable, non-exclusive, non-transferable, limited license to download, install, and use the Application solely for your personal, non-commercial purposes strictly in accordance with the terms of this Agreement.</p>
+
+        <h2>2. Data Accuracy Disclaimer</h2>
+        <div class="warning-box">
+            <strong>IMPORTANT:</strong> The credit card rewards, cashback rates, and mileage redemption rules displayed in CreditStar are for reference purposes only.
+        </div>
+        <p>While we strive to keep the data accurate, bank policies change frequently. We do not guarantee the immediate accuracy, completeness, or timeliness of any financial data presented. You should always verify the specific terms with your card issuer before making large transactions.</p>
+
+        <h2>3. Prohibited Uses</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>Reverse engineer, decompile, or attempt to extract the source code of the Application.</li>
+            <li>Use the Application for any unlawful purpose or to solicit others to perform or participate in any unlawful acts.</li>
+            <li>Copy or reuse the design, "Starry" character, or 3D assets without our written permission.</li>
+        </ul>
+
+        <h2>4. No Warranty</h2>
+        <p>THE APPLICATION IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. WE DISCLAIM ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+        <h2>5. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, in no event shall CreditStar Team be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data, or missed cashback rewards) arising out of the use of or inability to use the Application.</p>
+
+        <h2>6. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Your continued use of the Application following the posting of revised Terms means that you accept and agree to the changes.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at: <a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div id="hk" class="content-section">
+        <h1>使用條款 (Terms of Use)</h1>
+        <p class="caps">最後更新日期：2026年1月13日</p>
+
+        <p>下載或使用「CreditStar」（以下簡稱「本應用程式」），即表示閣下同意受本使用條款（以下簡稱「本條款」）的約束。如閣下不同意本條款，請勿使用本應用程式。</p>
+
+        <h2>1. 許可範圍</h2>
+        <p>CreditStar Team 授予閣下可撤銷、非獨家、不可轉讓的有限許可，僅限於閣下根據本協議條款進行個人、非商業目的下載、安裝及使用本應用程式。</p>
+
+        <h2>2. 數據準確性免責聲明</h2>
+        <div class="warning-box">
+            <strong>重要提示：</strong> 本應用程式顯示的信用卡回贈比例、積分規則及里數兌換率僅供參考。
+        </div>
+        <p>儘管我們致力於保持數據準確，但銀行條款可能隨時變更。我們不保證所展示的任何金融數據的即時性、完整性或準確性。在進行大額交易前，建議閣下務必向發卡銀行核實具體條款。</p>
+
+        <h2>3. 禁止用途</h2>
+        <p>閣下同意不會進行以下行為：</p>
+        <ul>
+            <li>對本應用程式進行逆向工程、反編譯或試圖提取源代碼。</li>
+            <li>將本應用程式用於任何非法目的，或誘導他人參與任何非法行為。</li>
+            <li>未經我們書面許可，複製或使用本應用程式的設計、「Starry」角色形象或 3D 素材。</li>
+        </ul>
+
+        <h2>4. 不作保證 (No Warranty)</h2>
+        <p>本應用程式是按「原樣 (As-Is)」和「可提供 (As-Available)」的基礎提供。我們不作任何明示或暗示的保證，包括但不限於適銷性、特定用途適用性及不侵權的暗示保證。</p>
+
+        <h2>5. 責任限制 (Limitation of Liability)</h2>
+        <p>在法律允許的最大範圍內，CreditStar Team 在任何情況下均不對因使用或無法使用本應用程式而引起的任何特殊、附帶、間接或後果性損害（包括但不限於利潤損失、數據丟失或錯失信用卡回贈）承擔責任。</p>
+
+        <h2>6. 條款修改</h2>
+        <p>我們保留隨時修改本條款的權利。若閣下在修訂後的條款發布後繼續使用本應用程式，即表示閣下接受並同意該等更改。</p>
+
+        <h2>7. 聯絡我們</h2>
+        <p>如閣下對本條款有任何疑問，請透過以下電郵聯絡我們：<a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div id="cn" class="content-section">
+        <h1>用户协议 (Terms of Use)</h1>
+        <p class="caps">最后更新日期：2026年1月13日</p>
+
+        <p>下载或使用“CreditStar”（以下简称“本应用程序”），即表示您同意受本使用条款（以下简称“本条款”）的约束。如果您不同意本条款，请勿使用本应用程序。</p>
+
+        <h2>1. 许可范围</h2>
+        <p>CreditStar Team 授予您可撤销、非独家、不可转让的有限许可，仅限于您根据本协议条款进行个人、非商业目的下载、安装及使用本应用程序。</p>
+
+        <h2>2. 数据准确性免责声明</h2>
+        <div class="warning-box">
+            <strong>重要提示：</strong> 本应用程序显示的信用卡返现比例、积分规则及里程兑换率仅供参考。
+        </div>
+        <p>尽管我们致力于保持数据准确，但银行条款可能随时变更。我们不保证所展示的任何金融数据的即时性、完整性或准确性。在进行大额交易前，建议您务必向发卡银行核实具体条款。</p>
+
+        <h2>3. 禁止用途</h2>
+        <p>您同意不会进行以下行为：</p>
+        <ul>
+            <li>对本应用程序进行逆向工程、反编译或试图提取源代码。</li>
+            <li>将本应用程序用于任何非法目的，或诱导他人参与任何非法行为。</li>
+            <li>未经我们书面许可，复制或使用本应用程序的设计、“Starry”角色形象或 3D 素材。</li>
+        </ul>
+
+        <h2>4. 不作保证</h2>
+        <p>本应用程序是按“原样 (As-Is)”和“可提供 (As-Available)”的基础提供。我们不作任何明示或暗示的保证，包括但不限於适销性、特定用途适用性及不侵权的暗示保证。</p>
+
+        <h2>5. 责任限制</h2>
+        <p>在法律允许的最大范围内，CreditStar Team 在任何情况下均不对因使用或无法使用本应用程序而引起的任何特殊、附带、间接或后果性损害（包括但不限於利润损失、数据丢失或错失信用卡返现）承担责任。</p>
+
+        <h2>6. 条款修改</h2>
+        <p>我们保留随时修改本条款的权利。若您在修订后的条款发布后继续使用本应用程序，即表示您接受并同意该等更改。</p>
+
+        <h2>7. 联系我们</h2>
+        <p>如果您对本条款有任何疑问，请通过以下电子邮件联系我们：<a href="mailto:support@creditstar.app">support@creditstar.app</a></p>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 CreditStar Team. All rights reserved.
+    </div>
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.querySelectorAll('.content-section').forEach(div => {
+            div.classList.remove('active');
+        });
+        document.getElementById(lang).classList.add('active');
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Match button to language
+        const buttons = document.querySelectorAll('.lang-btn');
+        if (lang === 'en') buttons[0].classList.add('active');
+        if (lang === 'hk') buttons[1].classList.add('active');
+        if (lang === 'cn') buttons[2].classList.add('active');
+    }
+
+    // Auto-detect language
+    window.onload = function() {
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.includes('HK') || userLang.includes('TW')) {
+            switchLang('hk');
+        } else if (userLang.includes('CN')) {
+            switchLang('cn');
+        } else {
+            switchLang('en');
+        }
+    };
+</script>
+
+</body>
+</html>
